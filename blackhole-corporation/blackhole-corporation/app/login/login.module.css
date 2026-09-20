@@ -1,0 +1,127 @@
+.page {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* The one bold moment: a soft glow behind the card, like light bent
+   around an event horizon. Everything else stays quiet. */
+.glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 640px;
+  height: 640px;
+  transform: translate(-50%, -55%);
+  background: radial-gradient(
+    circle,
+    rgba(232, 165, 75, 0.16) 0%,
+    rgba(232, 165, 75, 0.06) 35%,
+    rgba(7, 7, 11, 0) 70%
+  );
+  pointer-events: none;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  background: var(--void-900);
+  border: 1px solid var(--line-800);
+  border-radius: 14px;
+  padding: 40px 32px 32px;
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: var(--horizon-100);
+}
+
+.subtitle {
+  margin: 6px 0 32px;
+  color: var(--horizon-500);
+  font-size: 0.9rem;
+}
+
+.field {
+  margin-bottom: 18px;
+}
+
+.label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--horizon-300);
+  margin-bottom: 6px;
+}
+
+.input {
+  width: 100%;
+  background: var(--void-850);
+  border: 1px solid var(--line-800);
+  border-radius: 8px;
+  padding: 11px 12px;
+  color: var(--horizon-100);
+  font-size: 0.95rem;
+  transition: border-color 0.15s ease;
+}
+
+.input::placeholder {
+  color: var(--horizon-500);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--accretion-500);
+  box-shadow: 0 0 0 3px rgba(232, 165, 75, 0.18);
+}
+
+.error {
+  margin: -6px 0 18px;
+  color: var(--error-500);
+  font-size: 0.85rem;
+}
+
+.submit {
+  width: 100%;
+  background: var(--accretion-500);
+  color: var(--void-950);
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.submit:hover:not(:disabled) {
+  background: var(--accretion-400);
+}
+
+.submit:disabled {
+  background: var(--accretion-600);
+  cursor: default;
+  opacity: 0.7;
+}
+
+.submit:focus-visible {
+  outline: 2px solid var(--accretion-400);
+  outline-offset: 2px;
+}
+
+.footnote {
+  margin: 24px 0 0;
+  text-align: center;
+  color: var(--horizon-500);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
