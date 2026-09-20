@@ -1,0 +1,50 @@
+:root {
+  /* Color — grounded in the subject: void + accretion-disk glow */
+  --void-950: #07070b;
+  --void-900: #121019;
+  --void-850: #1a1723;
+  --line-800: #2a2733;
+  --accretion-500: #e8a54b;
+  --accretion-400: #f0bc72;
+  --accretion-600: #c78638;
+  --horizon-100: #f5f3ef;
+  --horizon-300: #cfccc4;
+  --horizon-500: #8b8b99;
+  --error-500: #e2574c;
+
+  --font-display: var(--font-display), system-ui, sans-serif;
+  --font-body: var(--font-body), system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--void-950);
+  color: var(--horizon-100);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+input,
+button {
+  font-family: inherit;
+}
+
+a {
+  color: var(--accretion-500);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
